@@ -33,6 +33,7 @@ class getSpecEntries(luigi.Task):
 
         for source in glob.glob(path_in + '/*'):
             source_name = source.split('/')[-1]
+            
             if source_name == 'avro':
                 source_path = glob.glob(source + '/*')
                 for file in source_path:
